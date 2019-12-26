@@ -37,6 +37,10 @@ namespace AlloyDemo.Business.Initialization
                     .AddEpiserverSupport()
                     .DisableMenubar()
                     .Toolbar("bold italic underline strikethrough");
+
+                config.Default()
+                    .AddPlugin("code").AddPlugin("advlist")
+                    .AppendToolbar("code");
             });
         }
     }
