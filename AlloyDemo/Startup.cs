@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
+using AlloyDemo.Features.RegisterPersonas;
 
 [assembly: OwinStartup(typeof(AlloyDemo.Startup))]
 
@@ -43,6 +44,8 @@ namespace AlloyDemo
                         regenerateIdentity: (manager, user) => manager.GenerateUserIdentityAsync(user))
                 }
             });
+
+            // app.UseRegisterPersonas(() => HttpContext.Current.Request.IsLocal);
         }
     }
 }
